@@ -9,7 +9,7 @@ import sys, getopt
 from abc import ABC, abstractmethod
 
 
-class vehicle(ABC):
+class Vehicle(ABC):
     """
     Abstract vehicle class to implement specific vehicle types such as intelligent driver models
 

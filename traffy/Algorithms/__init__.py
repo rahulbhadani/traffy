@@ -1,1 +1,2 @@
-from .vehiclegen import vehiclgen
+from .vehiclegen import VehiclGen
+from .random_vehiclegen import RandomVehicleGen

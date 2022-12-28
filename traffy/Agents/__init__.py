@@ -1,1 +1,2 @@
-from .vehicle import vehicle
+from .vehicle import Vehicle
+from .idm_vehicle import IDMVehicle

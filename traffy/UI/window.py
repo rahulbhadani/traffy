@@ -1,19 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 # Author : Rahul Bhadani
-# Initial Date: 2022-11-12
+# Initial Date: 2022-12-28
 __author__ = 'Rahul Bhadani'
 __email__  = 'rahulbhadani@email.arizona.edu'
+
 # For System and OS level task
 import sys, getopt
 from abc import ABC, abstractmethod
 
-class VehiclGen(ABC):
-    """
-    Abstract Vehicle Generator Class
-
-    """
-
+class Window(ABC):
     def __init__(self, sim, config={}, *args, **kwargs):
         self.sim = sim
 
@@ -26,19 +22,3 @@ class VehiclGen(ABC):
 
         # Calculate properties
         self.init_properties()
-
-    @abstractmethod
-    def set_default_config(self):    
-        pass
-
-    @abstractmethod
-    def init_properties(self):
-        pass
-
-    @abstractmethod
-    def generate_vehicle(self):
-        pass
-
-    @abstractmethod
-    def update(self):
-        pass
