@@ -12,7 +12,15 @@ import numpy as np
 from .vehicle import Vehicle
 
 class IDMVehicle(Vehicle):
+    """
+    IDMVehicle class that inherits from the Vehicle class and implements the Intelligent Driver Model (IDM)
+    """
     def __init__(self, config={}):
+        """
+        The constructor method for the class. It sets the default configuration for the IDM vehicle
+        and updates it with any configuration passed in as an argument. It also calls the 
+        init_properties method to calculate the properties of the vehicle.
+        """
         # Set default configuration
         self.set_default_config()
 
@@ -44,6 +52,9 @@ class IDMVehicle(Vehicle):
         self._v_max = self.v_max
 
     def update(self, lead, dt):
+        """
+        Method that updates the state of the IDM vehicle based on the state of the lead vehicle and the time step dt.
+        """
         # Update position and velocity
         if self.v + self.a*dt < 0:
             self.x -= 1/2*self.v*self.v/self.a
